@@ -3,11 +3,17 @@ A Twitch API Library for gathering information about a users live stream.
 
 # Functions
 checkLive(string username) | Returns 1 if live and 0 if not live.
+
 getViewers(string username) | Returns concurrent number of viewers.
+
 getGame(string username) | Returns current game.
+
 getFollowers(string username) | Returns total number of followers.
+
 totalViews(string username) | Returns total view count.
+
 getStatus(string username) | Returns stream title.
+
 isPartner(string username) | Returns 1 if Twitch Partner and 0 if not Twitch Partner.
 
 # Example
