@@ -1,6 +1,10 @@
 # Get-Twitch
 A Twitch API Library for gathering information about a users live stream.
 
+Make sure to include your Twitch ClientID in checkTwitch.php.
+
+Reference: https://www.twitch.tv/settings/connections
+
 # Functions
 checkLive(string username)	|	 Returns 1 if live and 0 if not live.
 
