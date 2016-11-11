@@ -5,6 +5,7 @@
 	// FUNCTIONS
 	function checkLive($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$check = $json["stream"];
@@ -21,6 +22,7 @@
 	
 	function getViewers($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$viewers = $json["stream"]["viewers"];
@@ -29,6 +31,7 @@
 	
 	function getGame($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$game = $json["stream"]["game"];
@@ -37,6 +40,7 @@
 	
 	function getFollowers($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$followers = $json["stream"]["channel"]["followers"];
@@ -45,6 +49,7 @@
 	
 	function totalViews($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$views = $json["stream"]["channel"]["views"];
@@ -53,6 +58,7 @@
 	
 	function getStatus($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$status = $json["stream"]["channel"]["status"];
@@ -61,6 +67,7 @@
 	
 	function isPartner($username)
 	{
+		global $clientID;
 		$api_url = "https://api.twitch.tv/kraken/streams/$username?client_id=$clientID";
 		$json = json_decode(file_get_contents($api_url), true);
 		$partner = $json["stream"]["channel"]["partner"];
